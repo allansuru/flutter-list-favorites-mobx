@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import '../stores/characters/characters_store.dart';
-import '../widgets/Pesquisar.dart';
+import '../widgets/pesquisar.dart';
 import '../widgets/characterCard.dart';
 
 class InicioPage extends StatelessWidget {
