@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
+import 'package:get_it/get_it.dart';
 import '../stores/characters/characters_store.dart';
 import '../widgets/characterCard.dart';
 
 class FavoritosPage extends StatelessWidget {
-  final CharactersStore store;
-
-  const FavoritosPage({Key? key, required this.store}) : super(key: key);
+  final CharactersStore store = GetIt.instance<CharactersStore>();
 
   @override
   Widget build(BuildContext context) {

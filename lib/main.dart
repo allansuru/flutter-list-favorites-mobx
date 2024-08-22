@@ -1,43 +1,29 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 import 'stores/characters/characters_store.dart';
+import 'utils/locator.dart';
 import 'views/favorito-screen.dart';
 import 'views/inicio-screen.dart';
 
 void main() {
-  runApp(
-    MultiProvider(
-      providers: [
-        Provider<CharactersStore>(create: (_) => CharactersStore()),
-      ],
-      child: MyApp(),
-    ),
-  );
+  setupLocator();
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // Recupera o CharactersStore do Provider
-    final CharactersStore store =
-        Provider.of<CharactersStore>(context, listen: false);
-
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(store: store),
+      home: MyHomePage(),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  final CharactersStore store;
-
-  const MyHomePage({Key? key, required this.store}) : super(key: key);
-
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
@@ -54,8 +40,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
     // Inicializa a lista de páginas com o store passado via widget
     _pages = [
-      InicioPage(store: widget.store),
-      FavoritosPage(store: widget.store),
+      InicioPage(),
+      FavoritosPage(),
     ];
   }
 

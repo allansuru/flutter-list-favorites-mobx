@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
+import 'package:get_it/get_it.dart';
 import '../stores/characters/characters_store.dart';
 import '../widgets/pesquisar.dart';
 import '../widgets/characterCard.dart';
 
 class InicioPage extends StatelessWidget {
-  final CharactersStore store;
+  final CharactersStore store = GetIt.instance<CharactersStore>();
   final TextEditingController _searchController = TextEditingController();
-
-  InicioPage({Key? key, required this.store}) : super(key: key);
 
   void _onSearch(String query) {
     store.fetchCharacters(query: query);

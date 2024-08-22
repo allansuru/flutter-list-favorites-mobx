@@ -1,6 +1,6 @@
 import 'package:mobx/mobx.dart';
 import '../../models/character.dart';
-import '../../services/http_api.dart'; // Atualize o caminho conforme necessário
+import '../../services/http_api.dart';
 
 part 'characters_store.g.dart';
 
@@ -45,7 +45,6 @@ abstract class _CharactersStoreBase with Store {
     } else {
       favoriteCharacters.add(character);
     }
-    print(favoriteCharacters);
   }
 
   bool isFavorite(int characterId) {
