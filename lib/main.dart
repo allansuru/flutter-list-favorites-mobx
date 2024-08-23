@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-
-import 'stores/characters/characters_store.dart';
 import 'utils/locator.dart';
 import 'views/favorito-screen.dart';
 import 'views/inicio-screen.dart';
+import 'views/login-screen.dart';
 
 void main() {
   setupLocator();
@@ -18,7 +17,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(),
+      // home: LoginPage(),
+      home: InicioPage(),
     );
   }
 }

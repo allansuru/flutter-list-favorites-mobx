@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "348005975451",
+    "project_id": "estudos-flutter-4fb9b",
+    "storage_bucket": "estudos-flutter-4fb9b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:348005975451:android:1a11ef6edfc3bd329b4d3e",
+        "android_client_info": {
+          "package_name": "com.example.novos_estudos"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3gTidwYQlbEWSaqZ7KTjAQiMsRVJ5YOs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
